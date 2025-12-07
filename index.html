@@ -227,7 +227,7 @@
                 </div>
                 <div class="calendar-container">
                     <iframe 
-                        src="https://calendar.google.com/calendar/embed?src=5ed0693508d4df1ba36fee131898c9ad511aed8c7443f66839e061ebfd9f5d18%40group.calendar.google.com&ctz=Asia%2FKuala_Lumpur&color=%23FF6D00" 
+                        src="https://calendar.google.com/calendar/embed?src=5ed0693508d4df1ba36fee131898c9ad511aed8c7443f66839e061ebfd9f5d18%40group.calendar.google.com&ctz=Asia%2FKuala_Lumpur" 
                         frameborder="0" 
                         scrolling="no">
                     </iframe>
@@ -250,7 +250,21 @@
         </div>
 
         <div class="info-section">
-            <div class="info-grid">
+            <div id="instagram-roles" class="info-grid">
+                <div class="info-card">
+                    <h3>かおん</h3>
+                    <p>デザイン作成</p>
+                </div>
+                <div class="info-card">
+                    <h3>さとそ</h3>
+                    <p>企画書作成とデザイナーに依頼</p>
+                </div>
+                <div class="info-card">
+                    <h3>ゆきは</h3>
+                    <p>投稿</p>
+                </div>
+            </div>
+            <div id="tiktok-roles" class="info-grid" style="display: none;">
                 <div class="info-card">
                     <h3>ゆきは</h3>
                     <p>企画書作成、編集、撮影スケジュール管理</p>
@@ -258,11 +272,12 @@
                 <div class="info-card">
                     <h3>さとそ</h3>
                     <p>気まずいインタビュー投稿案企画書撮影、北海道撮影</p>
+                </div>
             </div>
         </div>
 
         <footer>
-            <p>&copy; 2025 NPOボランチア All rights reserved.</p>
+            <p>&copy; 2024 NPOボランチア All rights reserved.</p>
         </footer>
     </div>
 
@@ -285,6 +300,15 @@
             
             // クリックされたボタンに active を追加
             event.target.classList.add('active');
+
+            // 役割セクションの切り替え
+            if (tabName === 'instagram') {
+                document.getElementById('instagram-roles').style.display = 'grid';
+                document.getElementById('tiktok-roles').style.display = 'none';
+            } else if (tabName === 'tiktok') {
+                document.getElementById('instagram-roles').style.display = 'none';
+                document.getElementById('tiktok-roles').style.display = 'grid';
+            }
         }
     </script>
 </body>
